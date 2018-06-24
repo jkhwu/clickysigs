@@ -2,7 +2,7 @@ import React from "react";
 
 const Column = props => {
   const size = props.size.split(" ").map(size => "col-" + size).join(" ");
-  return (
+    return (
     <div className={size}>
       {props.children}
     </div>

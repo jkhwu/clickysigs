@@ -1,78 +1,74 @@
 [
     {
       "id": 1,
-      "image": "http://cdn.playbuzz.com/cdn//82cb4631-ef99-41bd-9105-7ebc53534e0f/5fbd357c-2054-4387-85b3-2db69ada2d43.jpg",
+      "image": "./marilyn.png",
       "clicked": false,
       "desc": "Marilyn Monroe"
     },
     {
       "id": 2,
-      "image": "http://2.bp.blogspot.com/-4j37Gn27LRk/T2qSUrlVTwI/AAAAAAAAAAQ/KRcb9xDpHO8/s1600/585px-JohnHancocksSignature_svg.png",
+      "image": "./hancock.png",
       "clicked": false,
       "desc": "John Hancock"
     },
     {
       "id": 3,
-      "image": "https://imgix.ranker.com/user_node_img/118/2358290/original/walt-disney-photo-u38?w=650&q=50&fm=jpg&fit=crop&crop=faces",
+      "image": "./disney.png",
       "clicked": false,
       "desc": "Walt Disney"
     },
     {
       "id": 4,
-      "image": "https://www.awesomestories.com/images/user/1e4c068340.gif",
+      "image": "./elizabeth.png",
       "clicked": false,
       "desc": "Queen Elizabeth"
     },
     {
       "id": 5,
-      "image": "http://creatiwittyblog.com/wp-content/uploads/2012/06/famous-people-signatures-24.jpg",
+      "image": "./michael.png",
       "clicked": false,
       "desc": "Michael Jackson"
     },
     {
       "id": 6,
-      "image": "http://cdn.playbuzz.com/cdn//82cb4631-ef99-41bd-9105-7ebc53534e0f/0dda690a-845b-4676-81df-5d178adbc3c7.jpg",
+      "image": "./picasso.png",
       "clicked": false,
       "desc": "Picasso"
     },
     {
       "id": 7,
-      "image": "https://imgix.ranker.com/user_node_img/43/852967/original/diana-princess-of-wales-photo-u52?w=650&q=50&fm=jpg&fit=crop&crop=faces",
+      "image": "./diana.png",
       "clicked": false,
       "desc": "Princess Diana"
     },
     {
       "id": 8,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Dr_Seuss_signature.svg/1280px-Dr_Seuss_signature.svg.png",
+      "image": "./seuss.png",
       "clicked": false,
       "desc": "Dr. Seuss"
     },
     {
       "id": 9,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Autograph_of_Benjamin_Franklin.svg/500px-Autograph_of_Benjamin_Franklin.svg.png",
+      "image": "./franklin.png",
       "clicked": false,
       "desc": "Benjamin Franklin"
     },
     {
       "id": 10,
-      "image": "https://qph.fs.quoracdn.net/main-qimg-9ce78745e7887e90188bbc6f1c36ac29",
+      "image": "./taylor.png",
       "clicked": false,
       "desc": "Taylor Swift"
     },
     {
       "id": 11,
-      "image": "http://www.vector-logo.net/logo_preview/ai/c/CELINE_DION_SIGNATURE.png",
+      "image": "./celine.png",
       "clicked": false,
       "desc": "Celine Dion"
     },
     {
       "id": 12,
-      "image": "http://www.uidownload.com/files/395/738/442/elvis-presley-signature-thumb.jpg",
+      "image": "./elvis.png",
       "clicked": false,
       "desc": "Elvis Presley"
     }
   ]
-  
-  
-  
-  

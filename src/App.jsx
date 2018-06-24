@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import SigCard from "./components/SigCard";
 import Nav from "./components/Nav";
-import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Wrapper from "./components/Wrapper";
 import Container from "./Container";
 import Row from "./Row";
 import Column from "./Column";
 import sigs from "./sigs.json";
 import "./App.css";
 
-function shuffleSigs(array) {
+function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -27,6 +27,7 @@ class App extends Component {
   };
 
   handleClick = id => {
+    console.log("HANDLING CLICK");
     if (this.state.clicked.indexOf(id) === -1) {
       this.handleIncrement();
       this.setState({ clicked: this.state.clicked.concat(id) });
@@ -54,14 +55,15 @@ class App extends Component {
     this.setState({
       currentScore: 0,
       topScore: this.state.topScore,
-      rightWrong: "Play Again!",
+      rightWrong: "Try Again!",
       clicked: []
     });
     this.handleShuffle();
   };
 
   handleShuffle = () => {
-    let shuffledSigs = shuffleSigs(sigs);
+    console.log("HANDLING SHUFFLE");
+    let shuffledSigs = shuffle(sigs);
     this.setState({ sigs: shuffledSigs });
   };
 
@@ -69,17 +71,14 @@ class App extends Component {
     return (
       <Wrapper>
         <Nav
-          title="Autograph Memory Game"
+          title="Autographic Memory Game"
           score={this.state.currentScore}
           topScore={this.state.topScore}
           rightWrong={this.state.rightWrong}
         />
-
         <Title>
-          Try to click on each signature, but don't hit any duplicates, or
-          you'll have to start over!!!
+          Click on each signature only once to win!
         </Title>
-
         <Container>
           <Row>
             {this.state.sigs.map(sig => (
