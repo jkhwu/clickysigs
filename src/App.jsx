@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import SigCard from "./components/SigCard";
+import FriendCard from "./components/FriendCard";
 import Nav from "./components/Nav";
-import Title from "./components/Title";
 import Wrapper from "./components/Wrapper";
+import Title from "./components/Title";
 import Container from "./Container";
 import Row from "./Row";
 import Column from "./Column";
-import sigs from "./sigs.json";
+import friends from "./friends.json";
 import "./App.css";
 
-function shuffle(array) {
+function shuffleFriends(array) {
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -18,8 +18,9 @@ function shuffle(array) {
 };
 
 class App extends Component {
+  // Set this.state
   state = {
-    sigs,
+    friends,
     currentScore: 0,
     topScore: 0,
     rightWrong: "",
@@ -27,7 +28,6 @@ class App extends Component {
   };
 
   handleClick = id => {
-    console.log("HANDLING CLICK");
     if (this.state.clicked.indexOf(id) === -1) {
       this.handleIncrement();
       this.setState({ clicked: this.state.clicked.concat(id) });
@@ -45,7 +45,8 @@ class App extends Component {
     if (newScore >= this.state.topScore) {
       this.setState({ topScore: newScore });
     }
-    else if (newScore === 12) {
+    if (newScore === 12) {
+      console.log('won');
       this.setState({ rightWrong: "You win!" });
     }
     this.handleShuffle();
@@ -62,9 +63,8 @@ class App extends Component {
   };
 
   handleShuffle = () => {
-    console.log("HANDLING SHUFFLE");
-    let shuffledSigs = shuffle(sigs);
-    this.setState({ sigs: shuffledSigs });
+    let shuffledFriends = shuffleFriends(friends);
+    this.setState({ friends: shuffledFriends });
   };
 
   render() {
@@ -76,21 +76,23 @@ class App extends Component {
           topScore={this.state.topScore}
           rightWrong={this.state.rightWrong}
         />
+
         <Title>
-          Click on each signature only once to win!
+          Click each signature only once!
         </Title>
+
         <Container>
           <Row>
-            {this.state.sigs.map(sig => (
+            {this.state.friends.map(friend => (
               <Column size="md-3 sm-6">
-                <SigCard
-                  key={sig.id}
+                <FriendCard
+                  key={friend.id}
                   handleClick={this.handleClick}
                   handleIncrement={this.handleIncrement}
                   handleReset={this.handleReset}
                   handleShuffle={this.handleShuffle}
-                  id={sig.id}
-                  image={sig.image}
+                  id={friend.id}
+                  image={friend.image}
                 />
               </Column>
             ))}
